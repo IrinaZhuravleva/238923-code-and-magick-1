@@ -32,7 +32,10 @@ window.renderStatistics = function(ctx, names, times) {
     chooseColor(i, names, times, ctx);
     ctx.fillRect(initialTextX + indent * i, initialY + (histogramHeight - times[i] * playerHeight), barWidth, times[i] * playerHeight);
     ctx.fillText(names[i], initialTextX + indent * i, initialTextY);
+    ctx.fillText(Math.round(times[i]), initialTextX + indent * i, initialTextY + 160);
   }
+
+//последняя строчка не работает, хотя уже работала
 
   function chooseColor(i, names, results, ctx) {
     if (names[i] == "Вы") {
