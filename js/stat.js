@@ -34,31 +34,7 @@ window.renderStatistics = function(ctx, names, times) {
     ctx.fillText(names[i], initialTextX + indent * i, initialTextY);
   }
 
-//   еще один способ (первый)
-// function chooseColor(i, names, results, ctx) {
-//     if (names[i] == "Вы") {
-//       ctx.fillStyle = "rgba(255, 0, 0, 1)";
-//     } else if (names[i] == "Катя") {
-//       ctx.fillStyle = "#00" + Math.floor(Math.random() * 100) + "00";
-//     } else if (names[i] == "Игорь") {
-//       ctx.fillStyle = "#01" + Math.floor(Math.random() * 100) + "FF";
-//     } else {
-//       ctx.fillStyle = "#01" + (Math.floor(Math.random() * 100) + "FF";
-//     }
-//   }
-// };
-
-//   еще один способ (второй)
-// function chooseColor(i, names, results, ctx) {
-//     if (names[i] == "Вы") {
-//       ctx.fillStyle = "rgba(255, 0, 0, 1)";
-//     } else {
-//       ctx.fillStyle = "#01" + (Math.random() * 100).toFixed(0) + "FF";
-//     }
-//   }
-// };
-
-function chooseColor(i, names, results, ctx) {
+  function chooseColor(i, names, results, ctx) {
     if (names[i] == "Вы") {
       ctx.fillStyle = "rgba(255, 0, 0, 1)";
     } else {
