@@ -23,19 +23,17 @@ window.renderStatistics = function(ctx, names, times) {
   var histogramHeight = 150;
   var barWidth = 50;
   var indent = barWidth + 40;
-  var initialY = 80;
+  var initialY = 90;
   var initialTextX = 140;
-  var initialTextY = 250;
+  var initialTextY = 260;
   var playerHeight = histogramHeight / (max - 0);
 
   for (var i = 0; i < times.length; i++) {
     chooseColor(i, names, times, ctx);
     ctx.fillRect(initialTextX + indent * i, initialY + (histogramHeight - times[i] * playerHeight), barWidth, times[i] * playerHeight);
     ctx.fillText(names[i], initialTextX + indent * i, initialTextY);
-    ctx.fillText(Math.round(times[i]), initialTextX + indent * i, initialTextY + 160);
+    ctx.fillText(Math.round(times[i]), initialTextX + indent * i, histogramHeight - times[i] * playerHeight + 85);
   }
-
-//последняя строчка не работает, хотя уже работала
 
   function chooseColor(i, names, results, ctx) {
     if (names[i] == "Вы") {
